@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#09090B">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#111113"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BATCH SCAN"
+            android:textColor="#FBBF24"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/tv_instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fotografiaza mai multe foi sau selecteaza din galerie."
+            android:textColor="#FAFAFA"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 foi adaugate"
+            android:textColor="#FBBF24"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
+
+    <!-- Camera preview (jumatate din ecran) -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <!-- Butoane capture -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#111113">
+
+        <Button
+            android:id="@+id/btn_capture"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text=" Fotografiaza"
+            android:textColor="#09090B"
+            android:textSize="13sp"
+            android:backgroundTint="#FBBF24"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_from_gallery"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text=" Din galerie"
+            android:textColor="#FBBF24"
+            android:textSize="13sp"
+            android:backgroundTint="#27272A" />
+    </LinearLayout>
+
+    <!-- Lista foi adaugate -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foi adăugate:"
+        android:textColor="#71717A"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="4dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/container_scanned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="8dp" />
+    </ScrollView>
+
+    <!-- Processing overlay -->
+    <LinearLayout
+        android:id="@+id/layout_processing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#111113"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:indeterminateTint="#FBBF24"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Se proceseaza foile..."
+            android:textColor="#FAFAFA"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Buton procesare finala -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#09090B">
+
+        <Button
+            android:id="@+id/btn_process"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Corecteaza toate foile"
+            android:textColor="#09090B"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FBBF24"
+            android:enabled="false" />
+    </LinearLayout>
+
+</LinearLayout>

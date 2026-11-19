@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#09090B"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="#18181B"
+                android:src="@android:drawable/ic_media_previous"
+                android:tint="#A78BFA"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Test"
+                android:textColor="#FAFAFA"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Test Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test name"
+            android:textColor="#71717A"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/et_test_name"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="e.g., Midterm Geography"
+            android:textColor="#FAFAFA"
+            android:textColorHint="#52525B"
+            android:background="@drawable/bg_card"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:inputType="text"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Container pentru intrebari dinamice -->
+        <LinearLayout
+            android:id="@+id/questions_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <!-- Buton adauga intrebare -->
+        <LinearLayout
+            android:id="@+id/btn_add_question"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_card_border_purple"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add question"
+                android:textColor="#A78BFA"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Buton Create Test -->
+        <Button
+            android:id="@+id/btn_create_test"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Create Test"
+            android:textColor="#09090B"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:backgroundTint="#A78BFA"
+            android:layout_marginBottom="32dp"/>
+
+    </LinearLayout>
+</ScrollView>
